@@ -6,9 +6,12 @@ public class Main {
         ChessBoard board = new ChessBoard("White");
 
         board.board[0][0] = new Rook("White");
-
+        board.board[0][1] = new Horse("White");
+        board.board[0][2] = new Bishop("White");
+        board.board[0][3] = new Queen("White");
         board.board[0][4] = new King("White");
-
+        board.board[0][5] = new Bishop("White");
+        board.board[0][6] = new Horse("White");
         board.board[0][7] = new Rook("White");
         board.board[1][0] = new Pawn("White");
         board.board[1][1] = new Pawn("White");
@@ -20,9 +23,12 @@ public class Main {
         board.board[1][7] = new Pawn("White");
 
         board.board[7][0] = new Rook("Black");
-
+        board.board[7][1] = new Horse("Black");
+        board.board[7][2] = new Bishop("Black");
+        board.board[7][3] = new Queen("Black");
         board.board[7][4] = new King("Black");
-
+        board.board[7][5] = new Bishop("Black");
+        board.board[7][6] = new Horse("Black");
         board.board[7][7] = new Rook("Black");
         board.board[6][0] = new Pawn("Black");
         board.board[6][1] = new Pawn("Black");
@@ -40,12 +46,12 @@ public class Main {
         ChessBoard board = buildBoard();
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
-               „тобы проверить игру надо вводить команды:
-               'exit' - дл€ выхода
-               'replay' - дл€ перезапуска игры
-               'castling0' или 'castling7' - дл€ рокировки по соответствующей линии
-               'move 1 1 2 3' - дл€ передвижени€ фигуры с позиции 1 1 на 2 3(поле это двумерный массив от 0 до 7)
-               ѕроверьте могут ли фигуры ходить друг сквозь друга, корректно ли съедают друг друга, можно ли поставить шах и сделать рокировку?""");
+                „тобы проверить игру надо вводить команды:
+                'exit' - дл€ выхода
+                'replay' - дл€ перезапуска игры
+                'castling0' или 'castling7' - дл€ рокировки по соответствующей линии
+                'move 1 1 2 3' - дл€ передвижени€ фигуры с позиции 1 1 на 2 3(поле это двумерный массив от 0 до 7)
+                ѕроверьте могут ли фигуры ходить друг сквозь друга, корректно ли съедают друг друга, можно ли поставить шах и сделать рокировку?""");
         System.out.println();
         board.printBoard();
         while (true) {
